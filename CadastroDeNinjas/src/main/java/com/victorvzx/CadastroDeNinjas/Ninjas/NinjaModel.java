@@ -1,7 +1,10 @@
-package com.victorvzx.CadastroDeNinjas;
+package com.victorvzx.CadastroDeNinjas.Ninjas;
 
 
+import com.victorvzx.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 
 // JPA = Java Persistence API
@@ -13,12 +16,13 @@ import jakarta.persistence.*;
 public class NinjaModel {
 
     @Id
-    // Define como o ID será gerado, nesse caso, estratégia IDENTITY!
+    // Define como o ‘ID’ será gerado, nesse caso, estratégia IDENTITY!
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String email;
     private int idade;
+    private List<MissoesModel> missoes;
 
     public NinjaModel() {
 
