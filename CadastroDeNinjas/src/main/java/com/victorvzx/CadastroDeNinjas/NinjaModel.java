@@ -15,10 +15,10 @@ public class NinjaModel {
     @Id
     // Define como o ID será gerado, nesse caso, estratégia IDENTITY!
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String nome;
-    String email;
-    int idade;
+    private Long id;
+    private String nome;
+    private String email;
+    private int idade;
 
     public NinjaModel() {
 
